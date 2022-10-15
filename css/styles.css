@@ -384,6 +384,51 @@ body {
   fill: #fff
 }
 
+/*here starts modal window (index.html) css*/
+.modal {
+  width: 528px;
+  height: 581px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  width: viewport;
+  height: viewport;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.icon-close-button {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.icon-close {
+  fill: #000;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /*here starts portfolio.html css*/
 .filter-buttons {
   display: flex;
