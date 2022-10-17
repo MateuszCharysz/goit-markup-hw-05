@@ -530,6 +530,7 @@ body {
 
 .project {
   display: block;
+  position: relative;
   height: 404px;
   max-width: 370px;
   border: 1px;
@@ -540,6 +541,7 @@ body {
   margin-inline-start: 0;
   margin-inline-end: 0;
   flex-basis: calc((100%-60px)/3);
+
 }
 
 .project:hover {
@@ -548,13 +550,41 @@ body {
   transition: box-shadow var(--transition-time-timing);
 }
 
-.project>img {
+.project:hover .project-overlay {
+  transform: translateY(0);
+  transition: transform var(--transition-time-timing);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 294px;
+  padding: 49px 45px 49px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--transition-time-timing);
+}
+
+.project-overlay>p {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.project-overlay-mask {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay-mask>img {
   display: block;
 }
 
 .project-title {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -565,8 +595,6 @@ body {
 }
 
 .project-type {
-  font-family: "Roboto";
-  font-style: normal;
   font-size: 16px;
   line-height: 1.88;
   /* identical to box height, or 188% */
@@ -611,25 +639,5 @@ body {
 
   100% {
     opacity: 0;
-  }
-}
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(100%);
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0%);
   }
 }
