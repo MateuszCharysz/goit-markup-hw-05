@@ -6,9 +6,21 @@
   };
 
   refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModalAnimation);
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
+  }
+
+  function toggleModalAnimation() {
+    refs.modal.setAttribute("data-modal-close", "");
+    refs.modal.addEventListener(
+      "animationend",
+      () => {
+        refs.modal.removeAttribute("data-modal-close");
+        refs.modal.classList.toggle("is-hidden");
+      },
+      { once: true }
+    );
   }
 })();
