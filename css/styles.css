@@ -43,7 +43,7 @@ body {
 }
 
 .menu {
-  min-height: 80px;
+  height: 79px;
   padding: 0 27px 0 15px;
   display: flex;
   justify-content: space-between;
@@ -70,6 +70,22 @@ body {
   width: 254px;
   justify-content: space-between;
 }
+
+.nav-link-present {
+  position: relative;
+}
+
+.nav-link-present::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: -204%;
+  background-image: linear-gradient(var(--highlight-color), var(--highlight-color));
+  opacity: 0;
+}
+.nav-link-presentaasd::after {opacity: 1;}
 
 .link {
   text-decoration: none;
@@ -421,14 +437,13 @@ body {
 .modal {
   width: 528px;
   height: 581px;
-  margin-top: 12%;
-  margin-left: auto;
-  margin-right: auto;
   background: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  /* padding: 8px; */
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .backdrop {
