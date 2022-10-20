@@ -71,22 +71,6 @@ body {
   justify-content: space-between;
 }
 
-.nav-link-present {
-  position: relative;
-}
-
-.nav-link-present::after {
-  content: '';
-  display: block;
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  bottom: -204%;
-  background-image: linear-gradient(var(--highlight-color), var(--highlight-color));
-  opacity: 0;
-}
-.nav-link-presentaasd::after {opacity: 1;}
-
 .link {
   text-decoration: none;
   color: var(--main-font-color);
@@ -103,6 +87,26 @@ body {
 .link:hover {
   color: var(--highlight-color);
   transition: color var(--transition-time-timing)
+}
+
+.nav-link-present {
+  position: relative;
+  color: var(--highlight-color);
+}
+
+.nav-link-present::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: -204%;
+  background: linear-gradient(var(--highlight-color), var(--highlight-color));
+  border-radius: 2px;
+}
+
+.nav-link-present:visited {
+  color: var(--highlight-color);
 }
 
 .gray-mail-phone {
