@@ -162,10 +162,11 @@ body {
 }
 
 .call-to-action-bg {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../images/index/cta_bg.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 1600px, 1600px;
-  background-position: center, center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../images/index/cta_bg.jpg),
+    linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1)100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 1600px, 1600px, 100%;
+  background-position: center, center, center;
 }
 
 .call-to-action-h1 {
